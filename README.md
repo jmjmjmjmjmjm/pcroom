@@ -1,16 +1,24 @@
 # pcroom
 
-A new Flutter project.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+티켓 
+자동발권기, 
+1. 시작
+2. 시간선택 - 맞는지 확인. ^(유효성 체크)
+3. 결제창 -> 카드와 현금으로 가능 (drop box) 로 선택
+    카드일시 - 카드 투입(5초 걸림), 투입확인 후 결제완료
+    현금일시 - 현금 투입(5초 걸림), 투입확인 후 거스름돈 표시
+    카드 - 잔액부족, 결제완료
+    현금 - 결제완료, 결제완료(결제금액보다 투입금액이 많을시)
+5. 결제완료 안내 문구 후 5초뒤 메인
 
-A few resources to get you started if this is your first Flutter project:
+페이지,카멜표기,메서드작명(신경쓰기)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+# 안되던것
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+초기화 다시 back시 m,state 가 초기화되야한다.  O
+
+타임 함수를 사용하면, back가능이지만, 초기화가 되어야한다, 
+
+데이터같은거 map표시,
