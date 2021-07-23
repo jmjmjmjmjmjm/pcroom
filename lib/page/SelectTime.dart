@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pcroom/page/Way.dart';
+import 'package:pcroom/page/WayPage.dart';
 
 import 'Payment.dart';
 
@@ -21,11 +21,11 @@ class SelectTimePage extends StatelessWidget {
             crossAxisSpacing: 5,
             mainAxisSpacing: 5,
             children: [
-              timeBtn("01:00", "1,000"),
-              timeBtn("02:00", "2,000"),
-              timeBtn("03:00", "3,000"),
-              timeBtn("04:00", "4,000"),
-              timeBtn("05:00", "5,000"),
+              timeBtn("01:00", "1000"),
+              timeBtn("02:00", "2000"),
+              timeBtn("03:00", "3000"),
+              timeBtn("04:00", "4000"),
+              timeBtn("05:00", "5000"),
             ],
           ),
         ),
@@ -76,11 +76,15 @@ class SelectTimePage extends StatelessWidget {
                   ),
                   onPressed: () => Navigator.pop(context, 'Cancel')),
               MaterialButton(
-                  child: Text(
-                    "확인",
-                    style: TextStyle(color: Colors.blue),
-                  ),
-                  onPressed: () => Get.to(WayPage()))
+                child: Text(
+                  "확인",
+                  style: TextStyle(color: Colors.blue),
+                ),
+                onPressed: () => {
+                  Navigator.pop(context, 'Cancel'),
+                  Get.to(WayPage(), arguments: money),
+                },
+              )
             ],
           );
         },

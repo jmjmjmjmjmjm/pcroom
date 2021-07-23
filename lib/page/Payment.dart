@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pcroom/page/SelectTime.dart';
 
 import '../controller/Controller.dart';
 
@@ -14,6 +15,16 @@ class PaymentPage extends StatelessWidget {
     c.chargePlus(value, what);
 
     return Scaffold(
+      appBar: AppBar(
+        leading: GestureDetector(
+          onTap: () {
+            c.reset();
+            Get.offAll(SelectTimePage());
+          },
+          child: Icon(Icons.arrow_back),
+        ),
+        title: Text("계산"),
+      ),
       body: SafeArea(
         child: Center(
           child: Column(
